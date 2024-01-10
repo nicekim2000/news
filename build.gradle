@@ -18,7 +18,18 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa' // JPA
+	implementation 'com.mysql:mysql-connector-j'
+
 	implementation 'org.springframework.kafka:spring-kafka' // kafka
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'com.fasterxml.jackson.core:jackson-databind' //json 파싱
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.12.3' // 사용 중인 Jackson 버전과 일치하도록 수정하세요
+	// Jackson 의존성 버전을 Spring Boot에 의해 관리되도록 설정
+	implementation 'com.fasterxml.jackson.core:jackson-databind'
 }
 
 tasks.named('test') {
